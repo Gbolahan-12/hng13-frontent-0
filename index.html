@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card — Frontend Wizards Stage 0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Root container -->
+  <article data-testid="test-profile-card" class="profile-card">
+    <figure class="avatar">
+      <img
+        src="https://avatars.githubusercontent.com/u/583231?v=4"
+        alt="User Avatar"
+        data-testid="test-user-avatar"
+      />
+    </figure>
+
+    <div class="profile-content">
+      <header>
+        <h2 data-testid="test-user-name">John Doe</h2>
+      </header>
+
+      <p data-testid="test-user-bio">
+        I'm a passionate frontend developer who loves building clean and accessible UIs.
+      </p>
+
+      <div class="time">
+        <span data-testid="test-user-time" id="time"></span>
+      </div>
+
+      <nav>
+        <ul data-testid="test-user-social-links" class="social-links">
+          <li>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-twitter"
+            >
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-github"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-testid="test-user-social-linkedin"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <h3>Hobbies</h3>
+        <ul data-testid="test-user-hobbies">
+          <li>Reading</li>
+          <li>Coding</li>
+          <li>Traveling</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Dislikes</h3>
+        <ul data-testid="test-user-dislikes">
+          <li>Slow Wi-Fi</li>
+          <li>Unclean code</li>
+          <li>Procrastination</li>
+        </ul>
+      </section>
+    </div>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
