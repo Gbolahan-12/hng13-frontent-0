@@ -7,7 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Root container -->
+ <header class="navbar">
+  <div class="nav-brand">Frontend Wizards</div>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    ☰
+  </button>
+  <nav class="nav-links">
+    <button class="nav-close" aria-label="Close navigation">✖</button>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!--  Root container -->
   <article data-testid="test-profile-card" class="profile-card">
     <figure class="avatar">
       <img
@@ -86,5 +102,15 @@
   </article>
 
   <script src="script.js"></script>
+  <script>
+    // 🪄 Navbar toggle for mobile
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggleBtn.addEventListener('click', () => {
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>

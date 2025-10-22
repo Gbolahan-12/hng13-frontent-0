@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Frontend Wizards Stage 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--  Navbar -->
+  <header class="navbar">
+  <div class="nav-brand">Frontend Wizards</div>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    ☰
+  </button>
+  <nav class="nav-links">
+    <button class="nav-close" aria-label="Close navigation">✖</button>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Main Content -->
+  <main data-testid="test-about-page" class="about-container">
+    <section>
+      <h2>My Bio</h2>
+      <p data-testid="test-about-bio">
+        Hello! I’m John Doe, a frontend developer passionate about crafting clean, accessible, and responsive interfaces. I love learning and building things that people enjoy using.
+      </p>
+    </section>
+
+    <section>
+      <h2>My Goals in This Program</h2>
+      <ul data-testid="test-about-goals">
+        <li>Sharpen my frontend development skills</li>
+        <li>Learn better accessibility practices</li>
+        <li>Contribute to open-source projects</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Areas of Low Confidence</h2>
+      <p data-testid="test-about-confidence">
+        I’m currently working to build stronger confidence in writing clean, scalable JavaScript and improving my debugging skills.
+      </p>
+    </section>
+
+    <section>
+      <h2>Note to My Future Self</h2>
+      <p data-testid="test-about-future-note">
+        Dear Future Me, remember how far you’ve come. Keep learning, stay consistent, and don’t let imposter syndrome stop you from shining.
+      </p>
+    </section>
+
+    <section>
+      <h2>Extra Thoughts</h2>
+      <p data-testid="test-about-extra">
+        I’m excited about the journey ahead with HNG. The challenges push me to grow, and I can’t wait to collaborate with others.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    //  Navbar toggle
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggleBtn.addEventListener('click', () => {
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      toggleBtn.setAttribute('aria-expanded', !expanded);
+      navLinks.classList.toggle('show');
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
