@@ -9,6 +9,11 @@ A responsive, accessible profile card built with semantic HTML, CSS Flexbox, and
 - Accessible links and image with alt text
 - All required `data-testid` attributes for automated testing
 
+## Adding stage one feature
+- Adding navbar 
+- Responsiveness
+- About and Contact Page
+
 ##  Test IDs
 - `test-profile-card`
 - `test-user-name`
